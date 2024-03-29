@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  camera_node_service:
+    image: aibox-pro2-camera_node_service:latest
+    privileged: true
+    network_mode: host
+    environment:
+      - MODEL_PREFIX=trt
+    volumes:
+      - /proc/device-tree/compatible:/proc/device-tree/compatible
+      - /dev:/dev
+      - /data:/data
+    restart: unless-stopped
+
+  person_node_service:
+    image: aibox-pro2-person_node_service:latest
+    privileged: true
+    network_mode: host
+    environment:
+      - MODEL_PREFIX=trt
+    volumes:
+      - /proc/device-tree/compatible:/proc/device-tree/compatible
+      - /dev:/dev
+      - /data:/data
+    restart: unless-stopped
+
+  face_node_service:
+    image: aibox-pro2-face_node_service:latest
+    privileged: true
+    network_mode: host
+    environment:
+      - MODEL_PREFIX=trt
+    volumes:
+      - /proc/device-tree/compatible:/proc/device-tree/compatible
+      - /dev:/dev
+      - /data:/data
+    restart: unless-stopped
+
+  report_node_service:
+    image: aibox-pro2-report_node_service:latest
+    privileged: true
+    network_mode: host
+    environment:
+      - MODEL_PREFIX=trt
+    volumes:
+      - /proc/device-tree/compatible:/proc/device-tree/compatible
+      - /dev:/dev
+      - /data:/data
+    restart: unless-stopped
+
+  record_node_service:
+    image: aibox-pro2-record_node_service:latest
+    privileged: true
+    network_mode: host
+    environment:
+      - MODEL_PREFIX=trt
+    volumes:
+      - /proc/device-tree/compatible:/proc/device-tree/compatible
+      - /dev:/dev
+      - /data:/data
+    restart: unless-stopped
+
+  display_node_service:
+    image: aibox-pro2-display_node_service:latest
+    privileged: true
+    network_mode: host
+    environment:
+      - MODEL_PREFIX=trt
+    volumes:
+      - /proc/device-tree/compatible:/proc/device-tree/compatible
+      - /dev:/dev
+      - /data:/data
+    restart: unless-stopped
