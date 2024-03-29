@@ -13,3 +13,4 @@ sudo systemctl start auto_upgrade
 sudo systemctl status auto_upgrade
 # 查看状态，当看到active (running) 代表服务启动成功
 ```
+
